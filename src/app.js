@@ -12,15 +12,16 @@ window.onload = function() {
   let list = [];
   var total = first.length * second.length * third.length;
   for (var i = 0; i < total; i++) {
-    for (var a = 0; a < first.length - 1; a++) {
-      list.push(first[a] + second[b] + third[c]);
-      for (var b = 0; b < second.length - 1; b++) {
-        list.push(first[a] + second[b] + third[c]);
-        for (var c = 0; c < third.length - 1; c++) {
+    for (var a = 0; a < first.length; a++) {
+      for (var b = 0; b < second.length; b++) {
+        for (var c = 0; c < third.length; c++) {
           list.push(first[a] + second[b] + third[c] + ".com");
         }
       }
     }
   }
   console.log(list);
+};
+window.onload = () => {
+  document.querySelector("#test").innerHTML = list;
 };
